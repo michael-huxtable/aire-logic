@@ -14,9 +14,8 @@
       required
     ></v-textarea>
 
-    <v-btn :disabled="!valid" color="success" @click="validate">Validate</v-btn>
+    <v-btn :disabled="!valid" color="success" @click="submit">Submit</v-btn>
     <v-btn color="error" @click="reset">Reset Form</v-btn>
-    <v-btn color="warning" @click="resetValidation">Reset Validation</v-btn>
   </v-form>
 </template>
 
@@ -34,10 +33,17 @@ export default {
     descriptionRules: [v => !!v || 'Description is required']
   }),
   methods: {
-    validate() {
-      if (this.$refs.form.validate()) {
-        this.snackbar = true
+    submit() {
+      if (!this.$refs.form.validate()) {
+        return
       }
+
+      const todo = {
+        name: this.name,
+        description: this.description
+      }
+
+      this.$store.commit('bugs/add', todo)
     },
     reset() {
       this.$refs.form.reset()

@@ -53,6 +53,11 @@ export default {
       items: [
         {
           icon: 'apps',
+          title: 'Bugs',
+          to: '/bugs'
+        },
+        {
+          icon: 'apps',
           title: 'New Bug',
           to: '/bugs/new'
         }
