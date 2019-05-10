@@ -44,6 +44,7 @@ export default {
       }
 
       this.$store.commit('bugs/add', todo)
+      this.$router.push('/bugs')
     },
     reset() {
       this.$refs.form.reset()

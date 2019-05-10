@@ -20,9 +20,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data: () => ({
-    bugs: [{ title: 'test', description: 'testee' }]
-  })
+  computed: {
+    ...mapState({ bugs: state => state.bugs.list })
+  }
 }
 </script>
