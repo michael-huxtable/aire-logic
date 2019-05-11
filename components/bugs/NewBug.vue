@@ -1,10 +1,10 @@
 <template>
   <v-form ref="form" v-model="valid" lazy-validation>
     <v-text-field
-      v-model="name"
-      :counter="10"
-      :rules="nameRules"
-      label="Name"
+      v-model="title"
+      :counter="100"
+      :rules="titleRules"
+      label="Title"
       required
     ></v-text-field>
     <v-textarea
@@ -24,10 +24,10 @@ export default {
   components: {},
   data: () => ({
     valid: true,
-    name: '',
-    nameRules: [
-      v => !!v || 'Name is required',
-      v => (v && v.length <= 10) || 'Name must be less than 10 characters'
+    title: '',
+    titleRules: [
+      v => !!v || 'Title is required',
+      v => (v && v.length <= 100) || 'Title must be less than 100 characters'
     ],
     description: '',
     descriptionRules: [v => !!v || 'Description is required']
@@ -39,7 +39,7 @@ export default {
       }
 
       const todo = {
-        name: this.name,
+        title: this.title,
         description: this.description
       }
 

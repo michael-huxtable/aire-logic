@@ -1,6 +1,6 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
+  <v-layout align-center>
+    <v-flex xs12>
       <new-bug />
     </v-flex>
   </v-layout>
