@@ -55,4 +55,12 @@ describe('bugs/index', () => {
     ]
     expect(dates).toEqual(expected)
   })
+
+  it('renders the view bug links', () => {
+    const links = wrapper
+      .findAll(RouterLinkStub)
+      .wrappers.map(i => i.props('to'))
+    const expected = ['/bugs/1', '/bugs/2']
+    expect(links).toEqual(expected)
+  })
 })
