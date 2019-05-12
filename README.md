@@ -32,7 +32,7 @@ The current Vuex store is backed by an in-memory array that would be replaced by
 
 ## Difficulties
 
-I had previously not used Nuxt before writing this, previously I have used Vue via the Vue CLI. It took longer than expected learning the conventions of Nuxt and how its conventions behave. This also applies to Vuetify, the component library used within the project.
+I had previously not used Nuxt before writing this, previously I have used Vue via the Vue CLI. It took longer than expected learning the conventions of Nuxt and their behaviour. This also applies to Vuetify, the component library used within the project.
 
 ## API Backend
 
