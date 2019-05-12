@@ -30,6 +30,8 @@ I ran out of time adding tests to all pages in the frontend, so unfortunately on
 
 The current Vuex store is backed by an in-memory array that would be replaced by Vuex actions and XHR requests when the API is created.
 
+My overall aim was to implment bug creation, listing + viewing before moving onto the API so that there is a reasonable set of demonstratable and useful functionality.
+
 ## Difficulties
 
 I had previously not used Nuxt before writing this, previously I have used Vue via the Vue CLI. It took longer than expected learning the conventions of Nuxt and their behaviour. This also applies to Vuetify, the component library used within the project.
