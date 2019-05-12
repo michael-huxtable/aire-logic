@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapState({ bugs: state => state.bugs.list })
+    ...mapGetters({ bugs: 'bugs/getAll' })
   }
 }
 </script>
